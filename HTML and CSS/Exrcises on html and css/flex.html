@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flex</title>
+
+    <style>
+      * {
+        font-family: Arial;
+        margin: 0;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(152, 109, 209);
+        padding: 8px 10px 8px 15px;
+        margin: 6px;
+        align-items: center;
+      }
+
+      p {
+        color: white;
+        font-weight: bold;
+      }
+
+      .search {
+        padding: 6px 0 6px 16px;
+        width: 350px;
+        max-width: 400px;
+        border-radius: 12px;
+        border: none;
+      }
+
+      button {
+        background-color: transparent;
+        border: solid white 1px;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 2px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <p>
+        Home
+      </p>
+
+      <input class="search" type="text" placeholder="Swarch">
+
+      <button>Download</button>
+    </div>
+  </body>
+</html>
