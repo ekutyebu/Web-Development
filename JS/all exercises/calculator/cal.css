@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(25, 25, 25);
+}
+.cal-result {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.black-keys {
+  background-color: rgb(78, 78, 78);
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.orange-keys {
+  background-color: rgb(241, 172, 23);
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
