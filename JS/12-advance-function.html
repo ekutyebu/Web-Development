@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ADVANCE FUNCTION</title>
+  </head>
+  <body>
+    
+    <button class="js-button" onclick="
+
+      ">Click</button>
+    
+    <script>
+      /*
+      const buttonElem = document.querySelector('.js-button');
+
+      buttonElem.addEventListener('click', () => {
+        console.log('click');
+      });
+      */
+
+      //removeEventListener();
+      /*
+      function greeting() {
+        console.log('hello');
+      }
+      greeting();
+
+      setTimeout(function() {
+        console.log('timeout');
+      }, 3000);
+
+      setInterval(function() {
+        console.log('interval');
+      }, 3000)
+      */
+
+      /*
+
+      const regularFunction = function(param, param2){
+        console.log('hello');
+        return 5;
+      };
+
+      const arrowFunction = (param, param2) => {
+        console.log('hello');
+        return 5;
+      };
+      arrowFunction();
+
+      const oneParam = param => {
+        console.log(param + 1);
+      };
+      oneParam(2);
+
+      const oneLine = () => 3 + 2;
+      console.log(oneLine());
+
+      const object2 = {
+        method: () => {
+
+        },
+
+        method() {}
+      }
+
+      */
+
+      console.log([1, -3, 5].filter((value, index) => {
+        /*
+        if (value >= 0) {
+          return true;
+        }else {
+          return false;
+        }
+        */
+        return value >= 0;
+      }));
+
+      console.log([1, 1, 3].map((value, index) => {
+        return value * 2;
+      }));
+
+      console.log([1, 1, 3].map(value => value * 2));
+
+      /*closure if f have acces to v it will always have access to v*/
+    </script>
+  </body>
+</html>

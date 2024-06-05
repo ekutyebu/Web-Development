@@ -8,7 +8,9 @@
   <body>
     <button>hello</button>
     <script>
-      console.log(document.body)
+      document.body.addEventListener('keydown', (event) => {
+        console.log(event.key);
+      });
     </script>
   </body>
 </html>

@@ -1,74 +1,26 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>ToDo List</title>
-    <style>
-      body {
-        font-family: Arial;
-      }
-
-      .todo-grid,
-      .todo-input-grid {
-        display: grid;
-        grid-template-columns: 200px 150px 100px;
-        column-gap: 10px;
-        row-gap: 10px;
-        align-items: center;
-      }
-
-      .todo-input-grid {
-        margin-bottom: 10px;
-        align-items: stretch;
-      }
-
-      .name-input,
-      .due-date-input {
-        font-size: 15px;
-        padding: 6px;
-      }
-
-      .add-todo-button {
-        background-color: green;
-        color: white;
-        border: none;
-        font-size: 15px;
-        cursor: pointer;
-      }
-
-      .delete-todo-button {
-        background-color: darkred;
-        color: white;
-        border: none;
-        font-size: 15px;
-        cursor: pointer;
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
-    </style>
-  </head>
-
-  <body>
-    <p>Todo List</p>
-
-    <div class="todo-input-grid">
-
-      <input class="js-name-input name-input" placeholder="Todo Name">
-      <input class="js-due-date-input due-date-input" type="date">
-      <button class="add-todo-button" onclick="
-        addTodo();
-      ">Add</button>
-
-    </div>
-
-    <div class="js-todo-list todo-grid"></div>
-    <script>
-      const todoList = [];
+const todoList = [];
 
       renderTodoList();
 
       function renderTodoList() {
         let todoListHTML = '';
 
+        todoList.forEach(function(todoObject, index) {
+
+          const {name, dueDate} = todoObject;
+         
+          const html = `
+              <div>${name}</div> 
+              <div>${dueDate}</div>
+              <button class="delete-todo-button" onclick="
+                todoList.splice(${index}, 1);
+                renderTodoList();
+              ">Delete</button>
+          `;
+          todoListHTML += html;
+        });
+
+        /*
         for (let i = 0; i < todoList.length; i++) {
           const todoObject = todoList[i];
           //const name = todoObject.name;
@@ -84,6 +36,7 @@
           `;
           todoListHTML += html;
         }
+        */
 
         console.log(todoListHTML);
 
@@ -130,6 +83,3 @@
 
         renderTodoList();
       }
-    </script>
-  </body>
-</html>
